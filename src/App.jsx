@@ -1,10 +1,17 @@
-import './App.css';
+
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/Home";
+import ProxyChecker from "./pages/ProxyChecker";
+import { urls } from "./utils/urls";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline ">
-      This is flame cloud assignment
-    </h1>
+    <BrowserRouter>
+    <Routes>
+      <Route path="" element={<Home/>}></Route>
+      <Route path={urls.proxyChecker} element={<ProxyChecker/>}></Route>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
