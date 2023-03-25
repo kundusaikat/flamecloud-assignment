@@ -51,12 +51,12 @@ export const featureData = [
   },
 ];
 
-export const v4Data = [
+export const v4Data = 
   {
     version: 4,
     day: "$4.75",
     month: "$116.75",
-    includes: [
+    data: [
       {
         type: "1",
         text: "100 Threads",
@@ -82,15 +82,15 @@ export const v4Data = [
         text: "40 GBps",
       },
     ],
-  },
-];
+  }
+;
 
-export const v6Data = [
+export const v6Data = 
   {
-    version: 4,
+    version: 6,
     day: "$4.75",
     month: "$116.75",
-    includes: [
+    data: [
       {
         type: "1",
         text: "100 Threads",
@@ -124,8 +124,7 @@ export const v6Data = [
         text: "Septiltion per Location",
       },
     ],
-  },
-];
+  };
 
 export const planData = [
   {
@@ -142,8 +141,8 @@ export const planData = [
   },
   {
     text: "Residential Proxy",
-  },
-];
+  }]
+;
 
 export const feedbackData = [
   {

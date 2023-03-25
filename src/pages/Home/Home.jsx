@@ -4,17 +4,22 @@ import List1 from "../../assets/svg/List1";
 import List2 from "../../assets/svg/List2";
 import List3 from "../../assets/svg/List3";
 import List4 from "../../assets/svg/List4";
+import UserImage from "../../assets/svg/UserImage";
 import WhiteStar from "../../assets/svg/WhiteStar";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import "./index.css";
-import { featureData } from "./Data";
-import { v4 as uuidv4 } from 'uuid';
+import { blogData, featureData, feedbackData, planData, v4Data, v6Data } from "./Data";
+import { v4 as uuidv4 } from "uuid";
+import BlueTick from "../../assets/svg/BlueTick";
+import GreenTick from "../../assets/svg/GreenTick";
 
 const Home = () => {
+  console.log(v6Data);
   return (
     <div>
       <Navbar />
+
       <div className=" w-[824px] m-auto my-10  text-center text-pot-grey7  flex-row gap-5">
         <div>
           <p>WELCOME TO CREATIVE PROXIES</p>
@@ -63,7 +68,7 @@ const Home = () => {
         <div className="w-[80%] h-px bg-pot-grey1 m-auto my-7"></div>
       </div>
 
-      <div className="flex w-[1192px] m-auto justify-around mb-10">
+      <div className="flex w-[80%] m-auto justify-around mb-10">
         <div className="bg-pot-green2 p-5 rounded-lg border-[1px] border-pot-green3 ">
           <List1 />
         </div>
@@ -84,135 +89,249 @@ const Home = () => {
             <h1>Why we are the Best Proxy Providers</h1>
           </div>
           <div className="w-[45%] m-auto">
-           <p className="text-center text-pot-grey1">
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
-            augue sit amet mollis molestie.
-           </p>
+            <p className="text-center text-pot-grey1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
+              augue sit amet mollis molestie.
+            </p>
           </div>
           <div className="grid grid-cols-4 gap-3">
             {featureData.map((el) => (
-              <div className="border-[1px] border-pot-grey2 p-3 rounded-lg" key={uuidv4()}>
+              <div
+                className="border-[1px] border-pot-grey2 p-3 rounded-lg"
+                key={uuidv4()}
+              >
                 <div>{el.icon}</div>
                 <p className="text-xl text-pot-white">Feature No {el.no}</p>
-                <p className="text-xs" >{el.text}</p>
+                <p className="text-xs">{el.text}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="text-center">
+      <div className="mt-10">
         <div>
-          <p>We choose, we Deliver!</p>
+          <p className="text-center text-4xl font-semibold">
+            You choose, we <span className="text-pot-blue1">Deliver!</span>{" "}
+          </p>
         </div>
-        <div>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
+        <div className="w-[30%] m-auto mb-10">
+          <p className="text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
             augue sit amet mollis molestie.
           </p>
         </div>
+        <div className="grid grid-cols-2 gap-4 w-[40%] m-auto">
+          <div className="bg-pot-grey-3 border-2 p-3 rounded-lg border-[rgba(30, 30, 30, 0.1)] ">
+            <div className="flex  justify-between">
+              <div>
+                <div>
+                  <p className="bg-pot-sky2 inline py-1 px-2 rounded-lg">
+                    v{v4Data.version}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-bold">IPv{v4Data.version} Proxies</p>
+                </div>
+                <div>
+                  <p>Static/Routing</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p className="text-xs">FROM</p>
+                </div>
+                <div>
+                  <p className="text-xs">
+                    <span>{v4Data.day}/day</span>
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs">OR</p>
+                </div>
+                <div>
+                  <p className="text-xs">
+                    <span>{v4Data.month}/mo</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-full bg-pot-grey1 h-px m-auto my-3"></div>
+            <div>
+              <div>
+                <p className="text-pot-grey7">Plan includes:</p>
+              </div>
+              {v4Data.data.map((el) => (
+                <div className="flex items-center gap-1">
+                  <div>{el.type === "1" ? <BlueTick /> : <GreenTick />}</div>
+                  <div>{el.text}</div>
+                </div>
+              ))}
+            </div>
+            <div className="bg-pot-sky2 flex m-auto p-2 rounded-lg justify-center items-center text-pot-white gap-px">
+              <p>View Pricing</p>
+              <LeftArrow />
+            </div>
+          </div>
+          <div className="relative bg-pot-green4 border-2 p-3 rounded-lg border-[#16D113]">
+            <div className="absolute -top-3 left-5 bg-[#16D113] p-1 py-[0.5px] text-xs text-pot-white">
+              BEST SELLER
+            </div>
+            <div className="flex  justify-between">
+              <div>
+                <div>
+                  <p className="bg-[#16D113] inline py-1 px-2 rounded-lg">
+                    v{v6Data.version}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-bold">IPv{v6Data.version} Proxies</p>
+                </div>
+                <div>
+                  <p>Static/Routing</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p className="text-xs">FROM</p>
+                </div>
+                <div>
+                  <p className="text-xs">
+                    <span>{v6Data.day}/day</span>
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs">OR</p>
+                </div>
+                <div>
+                  <p className="text-xs">
+                    <span>{v6Data.month}/mo</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-full bg-pot-grey1 h-px m-auto my-3"></div>
+            <div>
+              <div>
+                <p className="text-pot-grey7">Plan includes:</p>
+              </div>
+              {v6Data.data.map((el) => (
+                <div className="flex items-center gap-1">
+                  <div>{el.type === "1" ? <BlueTick /> : <GreenTick />}</div>
+                  <div>{el.text}</div>
+                </div>
+              ))}
+            </div>
+            <div className="bg-[#16D113] flex m-auto p-2 rounded-lg justify-center items-center text-pot-white gap-px">
+              <p>View Pricing</p>
+              <LeftArrow />
+            </div>
+          </div>
+          <div className="col-span-2 bg-pot-grey3 p-3 border-[1px] border-pot-grey5 rounded-lg flex justify-between">
+            <div>
+              <p>--</p>
+              <p>Become a Reseller</p>
+              <p>200+ Happy Resellers</p>
+            </div>
+            <div className="w-[60%]">
+              <p className="text-pot-grey7 opacity-50">Plan includes:</p>
+              <div className="grid grid-cols-2 ">
+                {
+                  planData.map(el=>(
+                    <div className="flex items-center gap-1">
+                      <BlueTick />
+                      <p>{el.text}</p>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
       </div>
 
-      <div>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-        voluptate quae sed eum repellat? Quia natus sequi, exercitationem
-        voluptas corrupti deleniti necessitatibus incidunt fuga similique
-        consequatur recusandae animi cupiditate hic. Dolorum quisquam hic odio
-        dolor, quae sint ullam ea mollitia, eius debitis laborum eligendi,
-        aliquid assumenda soluta ex sit optio vitae amet autem fugiat! Eius
-        doloribus quibusdam unde incidunt deserunt. Debitis quod, repellat rerum
-        impedit fugiat quia odio ipsum cumque quis sapiente at nam officia odit.
-        Velit enim aliquid eos maiores nulla quis mollitia nihil ut, animi atque
-        quod molestias! Officia sequi nulla deserunt temporibus assumenda, ex
-        accusantium eos vitae soluta magni, minima dolore dolorem quidem, eaque
-        minus labore placeat pariatur aspernatur. Quas libero corrupti rerum
-        fugit ullam suscipit dicta! Culpa, incidunt? Nesciunt deleniti et eos,
-        quos quo iste praesentium quod quisquam quam assumenda minima provident
-        dolore eum ab deserunt. Soluta eveniet architecto repudiandae at modi
-        ducimus quo esse nulla? Maxime eveniet natus, magnam totam neque veniam.
-        Accusantium beatae rem magni nesciunt atque nihil expedita ipsa
-        distinctio quisquam ratione est exercitationem eaque eveniet, officia,
-        impedit tempora at, reiciendis dolorum dignissimos? Architecto, optio
-        earum. Vel odio error unde reprehenderit iusto accusamus, dicta,
-        doloribus commodi minus voluptates hic. Fugiat tempora quod quis minus
-        mollitia enim nemo eos omnis, delectus nam hic voluptates? Quos illo
-        nostrum ad assumenda, debitis vero explicabo quaerat eveniet, non alias
-        recusandae magnam nesciunt placeat, cumque perferendis? Tempore
-        laudantium ad excepturi sapiente impedit? Commodi et sed at dignissimos
-        perspiciatis. Placeat odit quis laboriosam iste quaerat facilis velit,
-        magni, illo labore quisquam quod enim aut alias reiciendis dignissimos
-        at, hic commodi repudiandae non debitis ipsa facere voluptas.
-        Repellendus, cum neque? Voluptates fuga consequatur reprehenderit ipsa
-        porro debitis dolore nostrum iusto fugiat unde doloremque, eum sed
-        veritatis. Officia nobis ad, inventore nesciunt esse officiis aliquam
-        laboriosam quisquam repellat eveniet deleniti deserunt. Quam dignissimos
-        error amet consequuntur magnam iure! Ratione unde odio officiis illo
-        maiores culpa consectetur saepe earum, ex ab, quam, sit ea distinctio
-        dolor ut! Fuga alias impedit quos facilis? Eos perspiciatis repellendus,
-        nobis eveniet cum aspernatur temporibus cupiditate maiores eaque quos
-        qui vitae esse dicta vel! Maxime ipsam est, reiciendis eveniet excepturi
-        maiores obcaecati aspernatur numquam dignissimos qui voluptate. Nulla
-        fugit veritatis explicabo nam autem vero porro eum ad laboriosam, facere
-        eius accusamus saepe quibusdam totam tempore nesciunt magni officia
-        temporibus consectetur reprehenderit veniam repellat asperiores quod
-        consequuntur? Alias! Blanditiis nobis ullam adipisci cupiditate.
-        Repudiandae inventore tenetur atque, ut facilis culpa eos nisi velit,
-        voluptas blanditiis eligendi reprehenderit molestiae ad dicta a rerum,
-        quod accusamus possimus sed ex dolorum. Obcaecati fuga qui magni quam
-        nostrum iste magnam eligendi quo rem blanditiis iure dicta nobis id,
-        illum quia! Repudiandae repellat similique asperiores error voluptate
-        eveniet sint tenetur, magnam rerum sequi! Laboriosam qui nulla inventore
-        dolores necessitatibus odit eum? Earum tenetur corporis dolor asperiores
-        sint natus praesentium debitis cupiditate, ea ratione veritatis officia
-        consequuntur nostrum blanditiis ipsam mollitia. Illum, nemo quas.
-        praesentium doloribus a voluptates eos nisi quidem aut, molestiae harum
-        asperiores expedita aliquam minus? Cupiditate tempora voluptate veniam
-        iusto nobis minus, debitis iste sit consequuntur! Molestiae doloremque
-        repellat nulla dicta. Blanditiis praesentium voluptas earum quidem
-        aperiam nemo vitae, quia totam, eligendi velit odit pariatur
-        perspiciatis, quas provident repellat doloribus accusantium optio
-        possimus exercitationem. Asperiores nemo dolorem quaerat modi vero aut!
-        Aut, libero necessitatibus nulla ea modi voluptas ab cupiditate vero
-        fugiat ratione debitis reiciendis quasi officiis nihil quas dignissimos?
-        Alias ducimus optio eius consequatur distinctio possimus quam voluptate
-        temporibus voluptates? Similique magnam, sunt sequi, in voluptatibus
-        placeat voluptas sint velit eligendi, molestias ipsam. Praesentium quo
-        ex dolor neque. Molestiae officia porro, sunt temporibus aliquam sequi
-        magni ad dolore quaerat deleniti. Vel modi quidem in odio fugiat
-        tenetur, consequatur natus! Iure rerum, odit voluptas pariatur maiores
-        consectetur nisi facere nostrum aliquam explicabo magnam voluptates
-        natus accusamus impedit consequuntur voluptatibus. Repellendus, ea.
-        Harum saepe aliquam, maiores qui distinctio quas quibusdam consequuntur
-        autem iste voluptas aliquid odio atque voluptatem? Ullam numquam,
-        voluptatem error accusamus magni, illo laborum excepturi atque enim
-        iusto recusandae commodi! Perspiciatis sint tempore illo suscipit natus
-        officia quo, adipisci explicabo itaque impedit architecto eum dolorem
-        omnis corporis temporibus molestiae alias voluptatem esse et aliquid
-        repellendus quidem? Harum possimus eum eveniet! Voluptatibus non vel
-        quod, esse quia mollitia eos nisi, quibusdam cum necessitatibus officia.
-        Vitae rerum vel laudantium dolorem, ullam recusandae maiores? Corrupti
-        similique earum fuga omnis laborum necessitatibus repellendus harum.
-        Delectus asperiores, quod sequi necessitatibus placeat consectetur neque
-        voluptate. Iste sint, nihil distinctio voluptas suscipit fugiat officiis
-        quo error nostrum, odit velit facilis veniam dolor ut sed laudantium,
-        molestiae est. Nihil laudantium distinctio ut. Impedit voluptates non
-        ipsum cumque possimus, nisi minus quae dolorum repellendus dignissimos
-        delectus exercitationem cum laudantium dolores, at ducimus. Est minima
-        iste ipsum odit, tenetur soluta. Tempore sunt, facere eos ipsam velit
-        ratione rerum earum iusto fuga dolorem. Exercitationem reprehenderit
-        cupiditate error. Consequatur ipsum impedit iste esse temporibus,
-        delectus culpa iusto fuga, explicabo error iure numquam. Corrupti ipsa
-        illum doloribus optio, sunt vero, iure reprehenderit neque dolorum
-        necessitatibus laudantium dicta, harum debitis esse iste officia. Iure
-        rerum ipsa accusantium quos non esse animi porro tempora iste. Odio,
-        eveniet at. Dolorem et officia id quis cupiditate cum ex dignissimos,
-        veritatis magni laudantium quia culpa. Recusandae quis explicabo, enim
-        neque in natus similique vitae nobis, quod, accusantium amet. Recusandae
-        eos labore architecto distinctio provident libero vel iure, sit natus,
-        incidunt, alias possimus ab obcaecati earum quibusdam inventore. Debitis
-        ullam atque provident saepe omnis tempore veniam nostrum perferendis
-        recusandae!
+      <div className=" w-[80%] m-auto my-20">
+        <div>
+          <p className="text-5xl text-center font-semibold">
+            Customers <span className="text-pot-green1">Love</span> our Proxies
+          </p>
+        </div>
+        <div className="w-[30%] m-auto mb-10">
+          <p className="text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
+            augue sit amet mollis molestie.
+          </p>
+        </div>
+        <div className="flex gap-4 w-[80%] m-auto">
+          {feedbackData.map((el) => (
+            <div className="bg-pot-green4 p-5 border-2 border-pot-green3 rounded-lg">
+              <div className="flex">
+                {new Array(el.star).fill(0).map((el) => (
+                  <div>
+                    <GreenStar />
+                  </div>
+                ))}
+                {new Array(5 - el.star).fill(0).map((el) => (
+                  <div>
+                    <WhiteStar />
+                  </div>
+                ))}
+              </div>
+              <div className="my-2">
+                <p className="text-sm">{el.feedback}</p>
+              </div>
+              <div className="flex gap-2">
+                <div>
+                  <UserImage />
+                </div>
+                <div>
+                  <p className="font-semibold">{el.name}</p>
+                  <p className="text-sm">{el.designation}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
+
+      <div className=" w-[65%] m-auto my-20 background-blue3 p-2">
+        <div>
+          <p className="text-5xl text-center font-semibold">
+            Read our <span className="text-pot-blue1">Exclusive</span> Blog
+          </p>
+        </div>
+        <div className="w-[50%] m-auto ">
+          <p className="text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
+            augue sit amet mollis molestie.
+          </p>
+        </div>
+        <div className="flex justify-center items-center gap-1 mb-10">
+          <p className="text-pot-sky2">Read All Blogs</p>
+          <LeftArrow color="#077BFF"/>
+        </div>
+        <div className="grid grid-cols-3 gap-3">
+          {
+            blogData.map(el=>(
+              <div>
+                <div className="bg-pot-blue2 h-[150px] border-[1px] border-pot-blue4">
+
+                </div>
+                <div>
+                  <p className="font-semibold text-pot-grey7">{el.title}</p>
+                </div>
+                <div>
+                  <p className="text-sm text-pot-grey7 opacity-50">{el.category}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      
       <Footer />
     </div>
   );
