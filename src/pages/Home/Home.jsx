@@ -9,10 +9,18 @@ import WhiteStar from "../../assets/svg/WhiteStar";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import "./index.css";
-import { blogData, featureData, feedbackData, planData, v4Data, v6Data } from "./Data";
+import {
+  blogData,
+  featureData,
+  feedbackData,
+  planData,
+  v4Data,
+  v6Data,
+} from "./Data";
 import { v4 as uuidv4 } from "uuid";
 import BlueTick from "../../assets/svg/BlueTick";
 import GreenTick from "../../assets/svg/GreenTick";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   console.log(v6Data);
@@ -37,10 +45,13 @@ const Home = () => {
             augue sit amet mollis molestie.
           </p>
         </div>
-        <div className="bg-pot-sky2 flex w-[222px] m-auto p-2 rounded-lg justify-center items-center text-pot-white gap-px">
-          <p>Get Started</p>
-          <LeftArrow />
-        </div>
+        <Link to="/proxychecker">
+          <div className="bg-pot-sky2 flex w-[222px] m-auto p-2 rounded-lg justify-center items-center text-pot-white gap-px">
+            <p>Get Started</p>
+
+            <LeftArrow />
+          </div>
+        </Link>
         <div className="bg-pot-green2 w-[222px] m-auto my-2 py-4 rounded-lg border-[1px] border-pot-green3">
           <div className="flex justify-center gap-px">
             <div className="bg-pot-green1">
@@ -236,20 +247,16 @@ const Home = () => {
             <div className="w-[60%]">
               <p className="text-pot-grey7 opacity-50">Plan includes:</p>
               <div className="grid grid-cols-2 ">
-                {
-                  planData.map(el=>(
-                    <div className="flex items-center gap-1">
-                      <BlueTick />
-                      <p>{el.text}</p>
-                    </div>
-                  ))
-                }
+                {planData.map((el) => (
+                  <div className="flex items-center gap-1">
+                    <BlueTick />
+                    <p>{el.text}</p>
+                  </div>
+                ))}
               </div>
             </div>
-
           </div>
         </div>
-        
       </div>
 
       <div className=" w-[80%] m-auto my-20">
@@ -310,28 +317,25 @@ const Home = () => {
         </div>
         <div className="flex justify-center items-center gap-1 mb-10">
           <p className="text-pot-sky2">Read All Blogs</p>
-          <LeftArrow color="#077BFF"/>
+          <LeftArrow color="#077BFF" />
         </div>
         <div className=" grid  gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {
-            blogData.map(el=>(
+          {blogData.map((el) => (
+            <div>
+              <div className="bg-pot-blue2 h-[150px] border-[1px] border-pot-blue4"></div>
               <div>
-                <div className="bg-pot-blue2 h-[150px] border-[1px] border-pot-blue4">
-
-                </div>
-                <div>
-                  <p className="font-semibold text-pot-grey7">{el.title}</p>
-                </div>
-                <div>
-                  <p className="text-sm text-pot-grey7 opacity-50">{el.category}</p>
-                </div>
+                <p className="font-semibold text-pot-grey7">{el.title}</p>
               </div>
-            ))
-          }
+              <div>
+                <p className="text-sm text-pot-grey7 opacity-50">
+                  {el.category}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
-      
       <Footer />
     </div>
   );

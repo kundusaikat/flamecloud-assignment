@@ -4,7 +4,7 @@ import DownArrow from "../../assets/svg/DownArrow";
 
 const Navbar = () => {
   return (
-    <div className="max-w-[70%]">
+    <div className="w-[90%] m-auto xl:max-w-[70%]">
       <div className=" flex justify-between items-center p-3">
         <div className="flex gap-4 justify-center items-center">
           <div className="flex">
