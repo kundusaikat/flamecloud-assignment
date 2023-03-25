@@ -14,11 +14,11 @@ const ProxyChecker = () => {
     <div>
       <Navbar />
 
-      <div className="w-[40%] m-auto my-20">
+      <div className="lg:w-[40%] m-auto my-20 ">
         <p className="text-center text-sm text-pot-grey7">
           PROXY LOCATION CHECKER
         </p>
-        <p className="text-center text-5xl font-semibold">
+        <p className="text-center text-3xl font-semibold lg:text-5xl">
           Check Locations of all your Proxies{" "}
           <span className="text-pot-sky2">Free</span> of Cost
         </p>

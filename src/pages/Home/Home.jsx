@@ -68,7 +68,7 @@ const Home = () => {
         <div className="w-[80%] h-px bg-pot-grey1 m-auto my-7"></div>
       </div>
 
-      <div className="flex w-[80%] m-auto justify-around mb-10">
+      <div className="w-[80%] m-auto sm:grid grid-cols-2 gap-2  lg:flex  justify-around mb-10">
         <div className="bg-pot-green2 p-5 rounded-lg border-[1px] border-pot-green3 ">
           <List1 />
         </div>
@@ -84,7 +84,7 @@ const Home = () => {
       </div>
 
       <div className="bg-pot-blue1">
-        <div className="w-[60%] m-auto py-20">
+        <div className="sm:w-[80%] lg:w-[60%] m-auto py-20">
           <div className="text-center text-white text-4xl">
             <h1>Why we are the Best Proxy Providers</h1>
           </div>
@@ -94,7 +94,7 @@ const Home = () => {
               augue sit amet mollis molestie.
             </p>
           </div>
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {featureData.map((el) => (
               <div
                 className="border-[1px] border-pot-grey2 p-3 rounded-lg"
@@ -121,7 +121,7 @@ const Home = () => {
             augue sit amet mollis molestie.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-4 w-[40%] m-auto">
+        <div className="lg:grid grid-cols-2 gap-4 w-[40%] m-auto">
           <div className="bg-pot-grey-3 border-2 p-3 rounded-lg border-[rgba(30, 30, 30, 0.1)] ">
             <div className="flex  justify-between">
               <div>
@@ -227,7 +227,7 @@ const Home = () => {
               <LeftArrow />
             </div>
           </div>
-          <div className="col-span-2 bg-pot-grey3 p-3 border-[1px] border-pot-grey5 rounded-lg flex justify-between">
+          <div className="sm:w-screen  lg:col-span-2 bg-pot-grey3 p-3 border-[1px] border-pot-grey5 rounded-lg flex justify-between ">
             <div>
               <p>--</p>
               <p>Become a Reseller</p>
@@ -264,7 +264,7 @@ const Home = () => {
             augue sit amet mollis molestie.
           </p>
         </div>
-        <div className="flex gap-4 w-[80%] m-auto">
+        <div className="sm:flex-row sm:gap-4 lg:flex gap-4 w-[80%] m-auto">
           {feedbackData.map((el) => (
             <div className="bg-pot-green4 p-5 border-2 border-pot-green3 rounded-lg">
               <div className="flex">
@@ -312,7 +312,7 @@ const Home = () => {
           <p className="text-pot-sky2">Read All Blogs</p>
           <LeftArrow color="#077BFF"/>
         </div>
-        <div className="grid grid-cols-3 gap-3">
+        <div className=" grid  gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {
             blogData.map(el=>(
               <div>
