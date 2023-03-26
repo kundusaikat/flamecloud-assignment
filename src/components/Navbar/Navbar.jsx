@@ -1,16 +1,18 @@
 import CreativeLogo from "../../assets/svg/CreativeLogo";
 import Discord from "../../assets/svg/Discord";
 import DownArrow from "../../assets/svg/DownArrow";
+import {Link} from "react-router-dom"
 
 const Navbar = () => {
   return (
-    <div className="w-[90%] m-auto xl:max-w-[70%]">
-      <div className=" flex justify-between items-center p-3">
+    <div className="sticky top-0 backdrop-blur-lg z-10">
+      <div className=" flex justify-between items-center p-3 lg:w-[80%] m-auto">
         <div className="flex gap-4 justify-center items-center">
-          <div className="flex">
+          <div className="flex items-center justify-center gap-px">
             <CreativeLogo />
+            <p className="font-figtree ">CreativeProxies</p>
           </div>
-          <div className="hidden xl:flex gap-4 justify-center items-center">
+          <div className="hidden md:flex gap-4 justify-center items-center">
             <div>
               <p className="text-pot-grey7">Pricing</p>
             </div>
@@ -39,8 +41,16 @@ const Navbar = () => {
           <div className="hidden xl:block">
             <p className="text-pot-grey7">Log in</p>
           </div>
-          <div className=" bg-pot-sky2 rounded-lg py-2 px-6">
+          <Link to="/proxychecker">
+          <div className=" bg-pot-sky2 rounded-lg py-2 px-6 cursor-pointer">
             <p className="text-pot-white">Get Started</p>
+          </div>
+          </Link>
+          
+          <div className="cursor-pointer w-7 h-7 p-2 gap-px grid bg-pot-blue3 items-center justify-center border-2  rounded xl:hidden">
+            <div className="h-px w-3 bg-pot-sky2"></div>
+            <div className="h-px w-3 bg-pot-sky2"></div>
+            <div className="h-px w-3 bg-pot-sky2"></div>
           </div>
         </div>
       </div>

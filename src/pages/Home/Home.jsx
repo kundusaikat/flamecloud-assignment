@@ -1,6 +1,7 @@
 import GreenStar from "../../assets/svg/GreenStar";
 import LeftArrow from "../../assets/svg/LeftArrow";
-import List1 from "../../assets/svg/List1";
+// import List1 from "../../assets/svg/List1";
+// import png from "../../assets/png/3square.png"
 import List2 from "../../assets/svg/List2";
 import List3 from "../../assets/svg/List3";
 import List4 from "../../assets/svg/List4";
@@ -26,27 +27,29 @@ const Home = () => {
   console.log(v6Data);
   return (
     <div>
+      {/* Navbar */}
       <Navbar />
 
-      <div className=" w-[824px] m-auto my-10  text-center text-pot-grey7  flex-row gap-5">
+      {/* section 1 */}
+      <div className="m-auto my-10  text-center text-pot-grey7  flex-row gap-5 w-[60%] lg:w-[40%]">
         <div>
           <p>WELCOME TO CREATIVE PROXIES</p>
         </div>
         <div>
-          <p className="text-5xl font-semibold">
+          <p className="text-4xl font-semibold ">
             We are the <span className="text-pot-sky2">Fastest</span> and the{" "}
             <span className="text-pot-green1">Most Reliable</span> Proxy Service
             since 2020
           </p>
         </div>
-        <div className="w-8/12 m-auto">
-          <p>
+        <div className="m-auto my-3">
+          <p className="text-sm lg:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
             augue sit amet mollis molestie.
           </p>
         </div>
         <Link to="/proxychecker">
-          <div className="bg-pot-sky2 flex w-[222px] m-auto p-2 rounded-lg justify-center items-center text-pot-white gap-px">
+          <div className="bg-pot-sky2 flex w-[222px] m-auto p-2 rounded-lg justify-center items-center text-pot-white gap-px cursor-pointer">
             <p>Get Started</p>
 
             <LeftArrow />
@@ -79,60 +82,78 @@ const Home = () => {
         <div className="w-[80%] h-px bg-pot-grey1 m-auto my-7"></div>
       </div>
 
-      <div className="w-[80%] m-auto sm:grid grid-cols-2 gap-2  lg:flex  justify-around mb-10">
-        <div className="bg-pot-green2 p-5 rounded-lg border-[1px] border-pot-green3 ">
-          <List1 />
+      {/* section 2 */}
+      <div className="w-[90%] m-auto grid grid-cols-2 gap-2  lg:flex  justify-around mb-10 lg:w-[50%]">
+        <div className="h-12 bg-pot-green2 p-2 rounded-lg border-[1px] border-pot-green3 flex gap-1 lg:h-auto">
+          {/* <List1 /> */}
+          <div className="list-1 w-8 h-8 flex justify-center rounded items-center">
+            <img src="/3square.png" alt="3square" />
+          </div>
+          <p className="text-[9px] lg:text-sm">Lorem Ipsum Dolor Sit Amet Top</p>
         </div>
-        <div className="bg-pot-green2 p-5 rounded-lg border-[1px] border-pot-green3">
-          <List2 />
+        <div className="h-12 bg-pot-green2 p-2 rounded-lg border-[1px] border-pot-green3 flex gap-1 lg:h-auto">
+          <div className="list-2 w-8 h-8 flex justify-center rounded items-center">
+            <img src="/lock.png" alt="3square" />
+          </div>
+          <p className="text-[9px] lg:text-sm">Lorem Ipsum Dolor Sit Amet Top</p>
         </div>
-        <div className="bg-pot-green2 p-5 rounded-lg border-[1px] border-pot-green3">
-          <List3 />
+        <div className="h-12 bg-pot-green2 p-2 rounded-lg border-[1px] border-pot-green3 flex gap-1 lg:h-auto">
+          <div className="list-3 w-8 h-8 flex justify-center rounded items-center">
+            <img src="/dollar-square.png" alt="3square" />
+          </div>
+          <p className="text-[9px] lg:text-sm">Lorem Ipsum Dolor Sit Amet Top</p>
         </div>
-        <div className="bg-pot-green2 p-5 rounded-lg border-[1px] border-pot-green3">
-          <List4 />
+        <div className="h-12 bg-pot-green2 p-2 rounded-lg border-[1px] border-pot-green3 flex gap-1 lg:h-auto">
+          <div className="list-4 w-8 h-8 flex justify-center rounded items-center">
+            <img src="/security-safe.png" alt="3square" />
+          </div>
+          <p className="text-[9px] lg:text-sm">Lorem Ipsum Dolor Sit Amet Top</p>
         </div>
       </div>
 
+      {/* section 3 */}
       <div className="bg-pot-blue1">
-        <div className="sm:w-[80%] lg:w-[60%] m-auto py-20">
-          <div className="text-center text-white text-4xl">
+        <div className=" m-auto py-20 lg:w-[80%]">
+          <div className="text-center text-white text-xl lg:text-2xl">
             <h1>Why we are the Best Proxy Providers</h1>
           </div>
-          <div className="w-[45%] m-auto">
-            <p className="text-center text-pot-grey1">
+          <div className="w-[60%] m-auto">
+            <p className="text-center text-pot-grey1 text-[9px] lg:text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
               augue sit amet mollis molestie.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="w-[90%] m-auto grid grid-cols-2 lg:grid-cols-4 gap-3 lg:w-[70%]">
             {featureData.map((el) => (
               <div
                 className="border-[1px] border-pot-grey2 p-3 rounded-lg"
                 key={uuidv4()}
               >
                 <div>{el.icon}</div>
-                <p className="text-xl text-pot-white">Feature No {el.no}</p>
-                <p className="text-xs">{el.text}</p>
+                <p className="text-sm font-semibold text-pot-white lg:text-xl">
+                  Feature No {el.no}
+                </p>
+                <p className="text-[9px] text-pot-grey1 lg:text-sm">{el.text}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
+      {/* section 4 */}
       <div className="mt-10">
         <div>
-          <p className="text-center text-4xl font-semibold">
+          <p className="text-center text-3xl font-semibold">
             You choose, we <span className="text-pot-blue1">Deliver!</span>{" "}
           </p>
         </div>
-        <div className="w-[30%] m-auto mb-10">
-          <p className="text-center">
+        <div className="w-[90%] m-auto mb-10">
+          <p className="text-center text-[0.8rem] lg:text-lg ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
             augue sit amet mollis molestie.
           </p>
         </div>
-        <div className="lg:grid grid-cols-2 gap-4 w-[40%] m-auto">
+        <div className="w-[70%] grid grid-cols-1 gap-5 m-auto lg:w-[50%] lg:grid-cols-2">
           <div className="bg-pot-grey-3 border-2 p-3 rounded-lg border-[rgba(30, 30, 30, 0.1)] ">
             <div className="flex  justify-between">
               <div>
@@ -150,18 +171,18 @@ const Home = () => {
               </div>
               <div>
                 <div>
-                  <p className="text-xs">FROM</p>
+                  <p className="text-xs lg:text-sm">FROM</p>
                 </div>
                 <div>
-                  <p className="text-xs">
+                  <p className="text-xs lg:text-sm">
                     <span>{v4Data.day}/day</span>
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs">OR</p>
+                  <p className="text-xs lg:text-sm">OR</p>
                 </div>
                 <div>
-                  <p className="text-xs">
+                  <p className="text-xs lg:text-sm">
                     <span>{v4Data.month}/mo</span>
                   </p>
                 </div>
@@ -185,7 +206,7 @@ const Home = () => {
             </div>
           </div>
           <div className="relative bg-pot-green4 border-2 p-3 rounded-lg border-[#16D113]">
-            <div className="absolute -top-3 left-5 bg-[#16D113] p-1 py-[0.5px] text-xs text-pot-white">
+            <div className="absolute -top-3 left-5 bg-[#16D113] p-1 py-[0.5px] text-xs lg:text-sm text-pot-white">
               BEST SELLER
             </div>
             <div className="flex  justify-between">
@@ -204,18 +225,18 @@ const Home = () => {
               </div>
               <div>
                 <div>
-                  <p className="text-xs">FROM</p>
+                  <p className="text-xs lg:text-sm">FROM</p>
                 </div>
                 <div>
-                  <p className="text-xs">
+                  <p className="text-xs lg:text-sm">
                     <span>{v6Data.day}/day</span>
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs">OR</p>
+                  <p className="text-xs lg:text-sm">OR</p>
                 </div>
                 <div>
-                  <p className="text-xs">
+                  <p className="text-xs lg:text-sm">
                     <span>{v6Data.month}/mo</span>
                   </p>
                 </div>
@@ -238,17 +259,20 @@ const Home = () => {
               <LeftArrow />
             </div>
           </div>
-          <div className="sm:w-screen  lg:col-span-2 bg-pot-grey3 p-3 border-[1px] border-pot-grey5 rounded-lg flex justify-between ">
+          <div className="w-[120%] relative -left-[15%] bg-pot-grey3 p-3 border-[1px] border-pot-grey5 rounded-lg flex justify-between lg:col-span-2 lg:static">
             <div>
-              <p>--</p>
-              <p>Become a Reseller</p>
-              <p>200+ Happy Resellers</p>
+              <div className="crown w-8 h-8 flex justify-center rounded items-center">
+                <img src="/crown.png" alt="crown" />
+              </div>
+
+              <p className="font-semibold text-[0.9rem]">Become a Reseller</p>
+              <p className="text-[0.8rem] lg:text-sm">200+ Happy Resellers</p>
             </div>
-            <div className="w-[60%]">
+            <div className="w-[70%]">
               <p className="text-pot-grey7 opacity-50">Plan includes:</p>
               <div className="grid grid-cols-2 ">
                 {planData.map((el) => (
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1 text-[0.8rem] lg:text-sm">
                     <BlueTick />
                     <p>{el.text}</p>
                   </div>
@@ -259,19 +283,20 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" w-[80%] m-auto my-20">
+      {/* section 5 */}
+      <div className="w-[90%] m-auto my-20">
         <div>
-          <p className="text-5xl text-center font-semibold">
+          <p className="text-2xl text-center font-semibold">
             Customers <span className="text-pot-green1">Love</span> our Proxies
           </p>
         </div>
-        <div className="w-[30%] m-auto mb-10">
-          <p className="text-center">
+        <div className=" m-auto mb-10">
+          <p className="text-center text-sm lg:text-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
             augue sit amet mollis molestie.
           </p>
         </div>
-        <div className="sm:flex-row sm:gap-4 lg:flex gap-4 w-[80%] m-auto">
+        <div className="grid gap-4 gap-4 w-[70%] m-auto grid-cols-1 lg:grid-cols-3 lg:w-[80%]">
           {feedbackData.map((el) => (
             <div className="bg-pot-green4 p-5 border-2 border-pot-green3 rounded-lg">
               <div className="flex">
@@ -287,15 +312,15 @@ const Home = () => {
                 ))}
               </div>
               <div className="my-2">
-                <p className="text-sm">{el.feedback}</p>
+                <p className="text-xs lg:text-sm">{el.feedback}</p>
               </div>
               <div className="flex gap-2">
                 <div>
                   <UserImage />
                 </div>
                 <div>
-                  <p className="font-semibold">{el.name}</p>
-                  <p className="text-sm">{el.designation}</p>
+                  <p className="font-semibold text-xs lg:text-sm">{el.name}</p>
+                  <p className="text-xs lg:text-sm">{el.designation}</p>
                 </div>
               </div>
             </div>
@@ -303,31 +328,32 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" w-[65%] m-auto my-20 background-blue3 p-2">
+      {/* section 6 */}
+      <div className=" m-auto my-20 background-blue3 p-2 lg:w-[60%]">
         <div>
-          <p className="text-5xl text-center font-semibold">
+          <p className="text-xl text-center font-semibold">
             Read our <span className="text-pot-blue1">Exclusive</span> Blog
           </p>
         </div>
-        <div className="w-[50%] m-auto ">
-          <p className="text-center">
+        <div className="w-[90%] m-auto ">
+          <p className="text-center text-xs lg:text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus
             augue sit amet mollis molestie.
           </p>
         </div>
         <div className="flex justify-center items-center gap-1 mb-10">
-          <p className="text-pot-sky2">Read All Blogs</p>
+          <p className="text-pot-sky2 text-sm lg:text-md">Read All Blogs</p>
           <LeftArrow color="#077BFF" />
         </div>
-        <div className=" grid  gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className=" grid  gap-3 grid-cols-2 w-[90%] m-auto lg:grid-cols-3 ">
           {blogData.map((el) => (
             <div>
-              <div className="bg-pot-blue2 h-[150px] border-[1px] border-pot-blue4"></div>
+              <div className="bg-pot-blue2 h-[100px] rounded border-[1px] border-pot-blue4"></div>
               <div>
-                <p className="font-semibold text-pot-grey7">{el.title}</p>
+                <p className="font-semibold text-pot-grey7 text-[0.6rem] md:text-sm">{el.title}</p>
               </div>
               <div>
-                <p className="text-sm text-pot-grey7 opacity-50">
+                <p className="text-[0.5rem] text-pot-grey7 opacity-50 md:text-sm">
                   {el.category}
                 </p>
               </div>

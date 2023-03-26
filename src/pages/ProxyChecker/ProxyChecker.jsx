@@ -14,15 +14,15 @@ const ProxyChecker = () => {
     <div>
       <Navbar />
 
-      <div className="lg:w-[40%] m-auto my-20 ">
-        <p className="text-center text-sm text-pot-grey7">
+      <div className="w-[80%] m-auto my-20 lg:w-[50%]">
+        <p className="text-center text-xs text-pot-grey7">
           PROXY LOCATION CHECKER
         </p>
-        <p className="text-center text-3xl font-semibold lg:text-5xl">
+        <p className="text-center text-2xl font-semibold lg:text-4xl">
           Check Locations of all your Proxies{" "}
           <span className="text-pot-sky2">Free</span> of Cost
         </p>
-        <p className="text-lg text-center w-[60%] m-auto my-2">
+        <p className="text-xs text-center w-[80%] m-auto my-2">
           To check location, enter the address or proxies you want to check (1
           IP Per line)
         </p>
@@ -31,14 +31,14 @@ const ProxyChecker = () => {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <div className="flex justify-between my-2 mb-7">
+        <div className="lg:flex justify-between my-2 mb-7">
           <div
-            className="bg-pot-sky2 text-pot-white p-2 px-10 rounded-lg"
+            className="bg-pot-sky2 text-pot-white p-2 px-10 rounded-lg inline-block"
             onClick={handleSubmit}
           >
             Check Location
           </div>
-          <div className="w-[35%] text-xs text-pot-grey7">
+          <div className="w-full text-[0.8rem] text-pot-grey7 lg:w-[40%] lg:text-xs">
             <p>
               By using our tool, you agree our <span>Terms of Service</span> and{" "}
               <span>Privacy Policy</span>
@@ -78,8 +78,8 @@ const ProxyChecker = () => {
             </div>
           )}
         </div>
-        <div className="flex justify-center items-center gap-2 my-2"> <p>Check out our IPv6 Compatibility Checker</p>
-        <p className="text-pot-sky2">View Tool</p>
+        <div className="flex justify-center items-center gap-2 my-2"> <p className="text-xs">Check out our IPv6 Compatibility Checker</p>
+        <p className="text-pot-sky2 text-xs">View Tool</p>
         <LeftArrow color="#077BFF"/>
         </div>
       </div>

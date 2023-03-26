@@ -21,32 +21,32 @@ export const featureData = [
   },
   {
     icon: <Devices />,
-    no: 1,
+    no: 3,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies interdum eros non suscipit.",
   },
   {
     icon: <Messages3 />,
-    no: 1,
+    no:4 ,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies interdum eros non suscipit.",
   },
   {
     icon: <Global />,
-    no: 1,
+    no: 5,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies interdum eros non suscipit.",
   },
   {
     icon: <ShieldTick />,
-    no: 1,
+    no: 6,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies interdum eros non suscipit.",
   },
   {
     icon: <Trade />,
-    no: 1,
+    no: 7,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies interdum eros non suscipit.",
   },
   {
     icon: <Flash />,
-    no: 1,
+    no: 8,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies interdum eros non suscipit.",
   },
 ];

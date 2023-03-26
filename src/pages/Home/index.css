@@ -1,7 +1,27 @@
-.half-green{
-    background: linear-gradient(to right,#16D113 50%, #DCDCE6 50% );
+.half-green {
+  background: linear-gradient(to right, #16d113 50%, #dcdce6 50%);
 }
 
-.background-blue3{
-    background: linear-gradient(180deg, #F7FAFF 0%, rgba(255, 255, 255, 0) 100%);
+.background-blue3 {
+  background: linear-gradient(180deg, #f7faff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.list-1 {
+  background: linear-gradient(135deg, #3bc9fb 0%, #42a6fb 100%);
+}
+
+.list-2 {
+    background: linear-gradient(135deg, #72E6E5 0%, #75DFF0 100%);
+}
+
+.list-3 {
+    background: linear-gradient(135deg, #80FC6A 0%, #41F064 100%);
+}
+
+.list-4 {
+  background: linear-gradient(135deg, #2e73e8 0%, #215fda 100%);
+}
+
+.crown{
+    background: linear-gradient(135deg, #FFDE2E 0%, #E38B08 100%)
 }

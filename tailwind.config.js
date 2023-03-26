@@ -21,10 +21,14 @@ module.exports = {
         "pot-green3" : "#D4EAE8",
         "pot-blue1":"#0566D4",
         "pot-blue2":"rgba(7, 123, 255, 0.1)",
+        "pot-blue3":"rgba(7, 123, 255, 0.25)",
         "pot-blue4":"rgba(7, 123, 255, 0.5)",
         "pot-blue5":"rgba(88, 101, 242, 0.1)"
       }
     },
+    fontFamily:{
+      figtree:"Figtree, sans-serif"
+    }
   },
   plugins: [],
 };

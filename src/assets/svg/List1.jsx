@@ -2,7 +2,7 @@
 
 const List1 = () => {
   return (
-    <svg width="204" height="44" viewBox="0 0 204 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100" height="44" viewBox="0 0 204 44" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect y="2" width="40" height="40" rx="8" fill="url(#paint0_linear_1_213)"/>
     <path opacity="0.4" d="M20 27V29.38C20 31.25 19.25 32 17.37 32H12.62C10.75 32 10 31.25 10 29.38V24.63C10 22.75 10.75 22 12.62 22H15V24.37C15 26.25 15.75 27 17.62 27H20Z" fill="white"/>
     <path opacity="0.6" d="M25 22V24.37C25 26.25 24.25 27 22.37 27H17.62C15.75 27 15 26.25 15 24.37V19.62C15 17.75 15.75 17 17.62 17H20V19.37C20 21.25 20.75 22 22.62 22H25Z" fill="white"/>
